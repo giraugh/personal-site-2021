@@ -10,15 +10,11 @@ import {
 } from './projectsHeadingSectionStyle'
 import { projectsDescription } from '../../config/strings'
 
-const SnakeImage = React.forwardRef((props, ref) => (
+const SnakeImage = () => (
   <HeadingImageWrapper>
-    <HeadingImage
-      alt="A blue snake with headphones"
-      ref={ref}
-      src={`${process.env.PUBLIC_URL}/snake.svg`}
-    />
+    <HeadingImage alt="A blue snake with headphones" src={`${process.env.PUBLIC_URL}/snake.svg`} />
   </HeadingImageWrapper>
-))
+)
 
 const ProjectsHeadingSection: React.FC = () => {
   return (

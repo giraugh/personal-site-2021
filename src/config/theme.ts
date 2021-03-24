@@ -1,4 +1,4 @@
-export const theme: unknown = {
+export const theme = {
   primaryFont: 'Roboto Mono Medium, roboto',
   secondaryBlue: '#CAC3FF',
   secondaryBlueDark: '#867CD9',

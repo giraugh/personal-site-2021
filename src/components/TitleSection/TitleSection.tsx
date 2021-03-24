@@ -6,22 +6,13 @@ import {
   TitleImage,
   Title,
   TitleImageWrapper,
-  /*ColourBlob,*/
   ContentPair,
   TitleSVG,
 } from './titleSectionStyle'
 
-const updatePositionFromRef = (ref, setPosition, center = true) => {
-  if (ref.current) {
-    const titleRect = ref.current.getClientRects()[0]
-    setPosition({
-      x: titleRect.left + (center ? titleRect.width / 2 : 0),
-      y: titleRect.top + (center ? titleRect.height / 2 : 0) + document.documentElement.scrollTop,
-    })
-  }
-}
+type Position = { x: number; y: number }
 
-const GiraffeImage = React.forwardRef((props, ref) => (
+const GiraffeImage = React.forwardRef((props, ref: React.Ref<HTMLImageElement>) => (
   <TitleImageWrapper>
     <TitleImage
       alt="A giraffe with cool sunglasses"
@@ -47,10 +38,19 @@ const ColourBlobPath = ({ toPos }) => {
 }
 
 const TitleSection: React.FC = () => {
-  const [titlePos, setTitlePos] = useState()
-  const titleRef = useRef(null)
+  const [titlePos, setTitlePos] = useState<Position>()
+  const titleRef = useRef<HTMLHeadingElement>(null)
 
-  const updatePosition = () => updatePositionFromRef(titleRef, setTitlePos)
+  const updatePosition = () => {
+    if (titleRef.current !== null) {
+      const titleRect = titleRef.current.getClientRects()[0]
+      setTitlePos({
+        x: titleRect.left + titleRect.width / 2,
+        y: titleRect.top + titleRect.height / 2 + document.documentElement.scrollTop,
+      })
+    }
+  }
+
   useLayoutEffect(() => {
     window.addEventListener('resize', updatePosition)
     updatePosition()
