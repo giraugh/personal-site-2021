@@ -66,6 +66,10 @@ export const HeadingWrapper = styled.div`
   @media (max-width: 500px) {
     padding-top: 20%;
   }
+
+  @media (min-width: 750px) {
+    justify-self: start;
+  }
 `
 
 export const HeadingDescription = styled.div`

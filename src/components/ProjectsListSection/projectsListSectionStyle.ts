@@ -32,6 +32,10 @@ export const ProjectTitle = styled.h2`
   font-size: 2.3em;
   letter-spacing: 0.04em;
   font-weight: normal;
+
+  @media (min-width: 750px) {
+    font-size: 3em;
+  }
 `
 
 export const ProjectImageWrapper = styled.div`
@@ -54,8 +58,10 @@ export const ProjectImageWrapper = styled.div`
   }
 `
 
-export const ProjectImage = styled.img`
+export const ProjectImage = styled.div`
   width: 100%;
+  height: 100%;
+  background-size: cover;
 
   @media (min-width: 750px) {
     position: relative;

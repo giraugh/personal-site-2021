@@ -20,13 +20,15 @@ const ProjectsListSection: React.FC = () => {
   )
 }
 
-const Project = ({ name, description, image }) => {
+const Project = ({ name, description, image, link }) => {
   return (
     <ProjectContainer>
-      <ProjectTitle> {name} </ProjectTitle>
+      <ProjectTitle>
+        <a href={link}>{name}</a>
+      </ProjectTitle>
       <ProjectDescription> {description} </ProjectDescription>
       <ProjectImageWrapper>
-        <ProjectImage src={image}></ProjectImage>
+        <ProjectImage style={{ backgroundImage: `url(${image})` }}></ProjectImage>
       </ProjectImageWrapper>
     </ProjectContainer>
   )
