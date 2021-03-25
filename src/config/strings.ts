@@ -6,3 +6,5 @@ I'm a computer science student from Melbourne Australia. I also tutor in program
 Read on to find out more about me and to see some of the projects I've worked on.`
 
 export const projectsDescription = `Here's a sample of some neat projects I've made and worked on.`
+
+export const gamesDescription = `Over the years I've made quite a few games and other various projects. Those are here!`
