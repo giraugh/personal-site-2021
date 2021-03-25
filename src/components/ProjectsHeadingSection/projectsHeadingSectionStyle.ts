@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+import BodySection from '../BodySection/BodySection'
+
+export const Container = styled(BodySection)`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  width: 100%;
   height: max(30vh, 300px);
-  margin-top: 10vh;
-  margin-bottom: 50px;
-  overflow: hidden;
-  padding-left: 10%;
 
   @media (max-width: 750px) {
     margin-top: 8vh;
@@ -16,10 +13,6 @@ export const Container = styled.div`
 
   @media (max-width: 750px) {
     padding-top: 0%;
-  }
-
-  @media (min-width: 750px) {
-    padding-left: 20%;
   }
 `
 

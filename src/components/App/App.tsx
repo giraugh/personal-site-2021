@@ -5,6 +5,7 @@ import { theme } from '../../config/theme'
 import TitleSection from '../TitleSection/TitleSection'
 import BioSection from '../BioSection/BioSection'
 import ProjectsHeadingSection from '../ProjectsHeadingSection/ProjectsHeadingSection'
+import ProjectsListSection from '../ProjectsListSection/ProjectsListSection'
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <TitleSection />
         <BioSection />
         <ProjectsHeadingSection />
+        <ProjectsListSection />
       </ThemeProvider>
     </div>
   )
