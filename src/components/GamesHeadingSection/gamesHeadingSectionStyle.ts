@@ -12,6 +12,11 @@ export const Container = styled(BodySection)`
   @media (max-width: 950px) {
     grid-template-columns: 1fr 3fr;
   }
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+  }
 `
 
 export const GamesImageWrapper = styled.div`
