@@ -45,6 +45,7 @@ export const GameTile = styled.div`
     background: ${(p) => p.theme.primaryPink};
     opacity: 0;
     color: white;
+    transition: opacity 0.1s;
   }
 
   &:hover > div {
