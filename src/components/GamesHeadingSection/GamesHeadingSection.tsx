@@ -21,7 +21,7 @@ const GamesHeaderSection: React.FC = () => {
     <Container>
       <BranchImage />
       <HeadingWrapper>
-        <Heading> Games & Other Projects </Heading>
+        <Heading id="games"> Games & Other Projects </Heading>
         <HeadingDescription> {gamesDescription} </HeadingDescription>
       </HeadingWrapper>
     </Container>

@@ -20,7 +20,7 @@ const ProjectsHeadingSection: React.FC = () => {
   return (
     <Container>
       <HeadingWrapper>
-        <Heading>Projects</Heading>
+        <Heading id="projects">Projects</Heading>
         <HeadingDescription>{projectsDescription}</HeadingDescription>
       </HeadingWrapper>
       <SnakeImage />
