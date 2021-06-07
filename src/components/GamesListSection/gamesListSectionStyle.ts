@@ -31,21 +31,42 @@ export const GameTile = styled.div`
   display: grid;
   column-gap: 5px;
   align-items: end;
-  background: coral;
+  background: ${(p) => p.theme.primaryPink};
   height: 300px;
   border-radius: 10px;
   background-size: cover;
   overflow: hidden;
+  background-blend-mode: luminosity;
+  border: 3px solid ${(p) => p.theme.primaryPink};
 
   & > div {
     width: 100%;
     padding: 25px;
     padding-bottom: 30px;
     height: max-content;
-    background: ${(p) => p.theme.primaryPink};
     opacity: 0;
     color: white;
-    transition: opacity 0.1s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &.light > div {
+    mix-blend-mode: darken;
+    background: linear-gradient(to bottom, transparent, #000000de 75%);
+  }
+
+  &.dark > div {
+    mix-blend-mode: hard-light;
+  }
+
+  &:hover {
+    background-blend-mode: normal;
+
+    &.light {
+      filter: brightness(1.5);
+    }
   }
 
   &:hover > div {
@@ -54,14 +75,21 @@ export const GameTile = styled.div`
 
   & h3 {
     font-size: 1.4em;
+    text-shadow: 1px 1px white;
   }
 
   & span {
-    color: ${(p) => p.theme.lightPink};
+    display: none;
   }
 
   & a {
     color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+  &.light a {
   }
 
   @media (max-width: 750px) {

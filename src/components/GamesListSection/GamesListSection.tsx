@@ -16,8 +16,8 @@ const GamesListSection: React.FC = () => {
   )
 }
 
-const Game = ({ name, description, image, link }) => (
-  <GameTile style={{ backgroundImage: `url(${image}` }}>
+const Game = ({ name, description, image, link, className }) => (
+  <GameTile style={{ backgroundImage: `url(${image}` }} className={className}>
     <div>
       <h3>
         <a href={link}>{name}</a>
