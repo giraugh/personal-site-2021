@@ -95,9 +95,11 @@ export const GameTile = styled.div`
   @media (max-width: 750px) {
     height: 400px;
     border: 10px solid ${(p) => p.theme.lightPink};
+    background-blend-mode: normal;
 
     & > div {
       opacity: 1;
+      mix-blend-mode: normal !important;
     }
   }
 `
