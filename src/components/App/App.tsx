@@ -8,6 +8,7 @@ import ProjectsHeadingSection from '../ProjectsHeadingSection/ProjectsHeadingSec
 import ProjectsListSection from '../ProjectsListSection/ProjectsListSection'
 import GamesHeadingSection from '../GamesHeadingSection/GamesHeadingSection'
 import GamesListSection from '../GamesListSection/GamesListSection'
+import LinksSection from '../LinksSection/LinksSection'
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <TitleSection />
         <BioSection />
+        <LinksSection />
         <ProjectsHeadingSection />
         <ProjectsListSection />
         <GamesHeadingSection />
