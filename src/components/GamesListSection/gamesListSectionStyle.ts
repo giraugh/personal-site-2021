@@ -85,7 +85,6 @@ export const GameTile = styled.div`
   & a {
     color: white;
     font-size: 2.5rem;
-    text-decoration: none;
     font-weight: bolder;
   }
 
