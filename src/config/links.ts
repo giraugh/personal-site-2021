@@ -3,3 +3,4 @@ export const resumeLink =
 export const githubLink = 'https://github.com/giraugh'
 export const contactMailAddress = 'ebreakey+contact@gmail.com'
 export const storeLink = 'https://www.redbubble.com/people/Giraugh/shop'
+export const siteGithubRepo = 'https://github.com/giraugh/personal-site-2021'
