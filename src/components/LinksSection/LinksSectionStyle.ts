@@ -35,7 +35,7 @@ export const ContactButton = styled('a')`
     animation-timing-function: ease-in-out;
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 1100px) {
     grid-column: span 1;
     grid-row: 4;
   }
@@ -46,15 +46,20 @@ export const LinksContainer = styled(BodySection)`
   grid-auto-flow: column;
   column-gap: 20px;
   row-gap: 20px;
-  width: 90%;
+  width: 85%;
   min-height: 250px;
   font-family: ${(p) => p.theme.primaryFont};
   padding-bottom: 20px;
 
-  @media (max-width: 750px) {
+  @media (max-width: 1100px) {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
     margin-bottom: 130px;
+
+    div p {
+      max-width: 80%;
+      text-align: center;
+    }
 
     .opt-dv {
       display: none;
@@ -89,6 +94,8 @@ export const LinksContainer = styled(BodySection)`
 `
 
 export const Heading = styled.h2`
+  display: flex;
+  gap: 1.5em;
   color: white;
   font-size: 1.5em;
   font-family: ${(p) => p.theme.primaryFont};
