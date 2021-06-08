@@ -23,6 +23,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.GH_PAGES_DEPLOY }}
-          branch: gh-pages
+          branch: master
           folder: build
           repository-name: giraugh/giraugh.github.io
