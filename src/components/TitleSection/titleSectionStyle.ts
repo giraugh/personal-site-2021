@@ -27,11 +27,26 @@ export const ContentPair = styled.div`
 
 export const Title = styled.h1`
   font-size: 3.6em;
-  font-family: ${(p) => p.theme.primaryFont};
+  font-family: sans, ${(p) => p.theme.primaryFont};
   color: white;
   height: max-content;
   justify-self: start;
   margin-top: 55%;
+
+  animation: fade-in 0.2s;
+  transition: transform 0.2s;
+  &:hover {
+    transform: perspective(0.3em) rotateX(1deg) rotateZ(1deg) scale(0.95);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   @media (min-width: 750px) {
     color: ${(p) => p.theme.secondaryBlueDark};
